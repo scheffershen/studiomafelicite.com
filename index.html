@@ -1039,7 +1039,8 @@
       <p>© <span id="year">2026</span> Studio Ma Félicité — studiomafelicite.com. <span data-i18n="footer.rights">Tous droits réservés.</span></p>
       <div class="flex gap-6">
         <a href="#" class="hover:text-gold-300 transition" data-i18n="footer.legal1">Mentions légales</a>
-        <a href="#" class="hover:text-gold-300 transition" data-i18n="footer.legal2">Politique de confidentialité</a>
+        <a href="/politique-de-confidentialite/" class="hover:text-gold-300 transition" data-i18n="footer.legal2">Politique de confidentialité</a>
+        <button type="button" id="manageCookiesLink" class="hover:text-gold-300 transition" data-i18n="footer.legal3">Gérer les cookies</button>
       </div>
     </div>
   </div>
@@ -1049,6 +1050,17 @@
 <button id="toTop" class="fixed bottom-6 right-6 z-40 grid place-items-center w-12 h-12 rounded-full bg-wine-700 text-cream-50 shadow-lift opacity-0 pointer-events-none translate-y-3 transition-all duration-300 hover:bg-wine-600" aria-label="Retour en haut" data-i18n-aria="a11y.toTop">
   <svg class="w-4 h-4" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8"><path d="M12 19V5M6 11l6-6 6 6" stroke-linecap="round" stroke-linejoin="round"/></svg>
 </button>
+
+<!-- Cookie consent (gates analytics loading until the visitor chooses) -->
+<div id="cookieConsent" class="fixed inset-x-0 bottom-0 z-50 hidden">
+  <div class="mx-auto max-w-3xl m-4 rounded-2xl bg-ink-900 text-cream-100 shadow-lift px-6 py-5 flex flex-col sm:flex-row items-center gap-4">
+    <p class="text-sm leading-relaxed flex-1" data-i18n="consent.message">Nous utilisons des cookies analytiques pour comprendre comment vous utilisez ce site. Vous pouvez accepter ou refuser.</p>
+    <div class="flex gap-3 shrink-0">
+      <button type="button" id="consentDecline" class="rounded-full border border-cream-50/30 px-5 py-2.5 text-[12px] font-semibold uppercase tracking-[0.14em] hover:bg-cream-50/10 transition" data-i18n="consent.decline">Refuser</button>
+      <button type="button" id="consentAccept" class="rounded-full bg-gold-500 text-ink-900 px-5 py-2.5 text-[12px] font-semibold uppercase tracking-[0.14em] hover:bg-gold-400 transition" data-i18n="consent.accept">Accepter</button>
+    </div>
+  </div>
+</div>
 
 <script>
 (function () {
@@ -1070,6 +1082,8 @@
               marquee:"Lieux et partenaires sélectionnés", filterPortfolio:"Filtrer le portfolio",
               testimonialSlides:"Diapositives de témoignages", toTop:"Retour en haut",
               openMenu:"Ouvrir le menu", closeMenu:"Fermer le menu" },
+      consent: { message:"Nous utilisons des cookies analytiques pour comprendre comment vous utilisez ce site. Vous pouvez accepter ou refuser.",
+                 accept:"Accepter", decline:"Refuser" },
       nav: { about:"Maison", services:"Prestations", portfolio:"Portfolio",
              testimonials:"Clients", contact:"Contact", bookCta:"Réserver un rendez-vous" },
       hero: {
@@ -1176,7 +1190,7 @@
         motto:"Votre félicité, notre métier.",
         navHeader:"Navigation", servicesHeader:"Prestations",
         serviceLink1:"Mariages", serviceLink2:"Anniversaires", serviceLink4:"Animation & Présentateurs", serviceLink5:"Scénographie",
-        atelierHeader:"Localisation", rights:"Tous droits réservés.", legal1:"Mentions légales", legal2:"Politique de confidentialité"
+        atelierHeader:"Localisation", rights:"Tous droits réservés.", legal1:"Mentions légales", legal2:"Politique de confidentialité", legal3:"Gérer les cookies"
       }
     },
 
@@ -1187,6 +1201,8 @@
               marquee:"Selected venues and partners", filterPortfolio:"Filter portfolio",
               testimonialSlides:"Testimonial slides", toTop:"Back to top",
               openMenu:"Open menu", closeMenu:"Close menu" },
+      consent: { message:"We use analytics cookies to understand how you use this site. You can accept or decline.",
+                 accept:"Accept", decline:"Decline" },
       nav: { about:"About", services:"Services", portfolio:"Portfolio",
              testimonials:"Testimonials", contact:"Contact", bookCta:"Book a Consultation" },
       hero: {
@@ -1304,6 +1320,8 @@
               marquee:"精选场地与合作伙伴", filterPortfolio:"筛选作品集",
               testimonialSlides:"客户评价轮播", toTop:"返回顶部",
               openMenu:"打开菜单", closeMenu:"关闭菜单" },
+      consent: { message:"我们使用分析类 Cookie 来了解您对本网站的使用情况。您可以选择接受或拒绝。",
+                 accept:"接受", decline:"拒绝" },
       nav: { about:"关于我们", services:"服务项目", portfolio:"作品集",
              testimonials:"客户评价", contact:"联系我们", bookCta:"预约咨询" },
       hero: {
@@ -1799,6 +1817,53 @@
        (/, /en/, /zh/) so the page never silently overrides the language the
        visitor navigated to based on a stale localStorage value. ── */
   applyLang(PAGE_LANG);
+})();
+</script>
+
+<!-- Google Analytics, gated behind cookie consent (CNIL/GDPR: no analytics
+     cookie is set until the visitor explicitly accepts). -->
+<script>
+(function () {
+  'use strict';
+  var GA_ID = 'G-4B3HELZZTB';
+  var STORAGE_KEY = 'smf-consent';
+
+  function loadGA() {
+    if (window.gaLoaded) return;
+    window.gaLoaded = true;
+    var s = document.createElement('script');
+    s.async = true;
+    s.src = 'https://www.googletagmanager.com/gtag/js?id=' + GA_ID;
+    document.head.appendChild(s);
+    window.dataLayer = window.dataLayer || [];
+    window.gtag = function () { window.dataLayer.push(arguments); };
+    window.gtag('js', new Date());
+    window.gtag('config', GA_ID);
+  }
+
+  var consent = null;
+  try { consent = localStorage.getItem(STORAGE_KEY); } catch (e) {}
+
+  var banner = document.getElementById('cookieConsent');
+
+  if (consent === 'accepted') {
+    loadGA();
+  } else if (consent !== 'declined' && banner) {
+    banner.classList.remove('hidden');
+  }
+
+  var acceptBtn = document.getElementById('consentAccept');
+  var declineBtn = document.getElementById('consentDecline');
+
+  if (acceptBtn) acceptBtn.addEventListener('click', function () {
+    try { localStorage.setItem(STORAGE_KEY, 'accepted'); } catch (e) {}
+    if (banner) banner.classList.add('hidden');
+    loadGA();
+  });
+  if (declineBtn) declineBtn.addEventListener('click', function () {
+    try { localStorage.setItem(STORAGE_KEY, 'declined'); } catch (e) {}
+    if (banner) banner.classList.add('hidden');
+  });
 })();
 </script>
 </body>
