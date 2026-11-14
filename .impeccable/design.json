@@ -1,0 +1,189 @@
+{
+  "schemaVersion": 2,
+  "generatedAt": "2026-11-14T00:00:00Z",
+  "title": "Design System: Studio Ma Félicité",
+  "extensions": {
+    "colorMeta": {
+      "primary": { "role": "primary", "displayName": "Salon Wine", "canonical": "#6B1B26", "tonalRamp": ["#3A0D16", "#6B1B26", "#7E232D", "#93303D", "#B5717C", "#F6ECEC"] },
+      "wine-900": { "role": "primary", "displayName": "Cellar Wine", "canonical": "#3A0D16" },
+      "wine-600": { "role": "primary", "displayName": "Warm Bordeaux", "canonical": "#7E232D" },
+      "wine-500": { "role": "primary", "displayName": "Garnet", "canonical": "#93303D" },
+      "wine-50": { "role": "primary", "displayName": "Wine Wash", "canonical": "#F6ECEC" },
+      "secondary": { "role": "secondary", "displayName": "Candle Gold", "canonical": "#C9A96A", "tonalRamp": ["#A98A4E", "#C9A96A", "#D4B87C", "#E3CD9F"] },
+      "gold-600": { "role": "secondary", "displayName": "Antique Brass", "canonical": "#A98A4E" },
+      "gold-400": { "role": "secondary", "displayName": "Lit Gold", "canonical": "#D4B87C" },
+      "gold-300": { "role": "secondary", "displayName": "Champagne Gilt", "canonical": "#E3CD9F" },
+      "tertiary": { "role": "tertiary", "displayName": "Dusk Mauve", "canonical": "#7A4E63", "tonalRamp": ["#6B4055", "#7A4E63", "#8B5D73"] },
+      "neutral": { "role": "neutral", "displayName": "Linen Cream", "canonical": "#FDFBF6", "tonalRamp": ["#E1D2B7", "#EFE3D1", "#F8F2E8", "#FDFBF6"] },
+      "cream-100": { "role": "neutral", "displayName": "Ivory Parchment", "canonical": "#F8F2E8" },
+      "cream-200": { "role": "neutral", "displayName": "Warm Vellum", "canonical": "#EFE3D1" },
+      "cream-300": { "role": "neutral", "displayName": "Sand", "canonical": "#E1D2B7" },
+      "taupe-100": { "role": "neutral", "displayName": "Stone 100", "canonical": "#DED4C8", "tonalRamp": ["#6E6153", "#8E7F6E", "#B0A190", "#C9BCAC", "#DED4C8"] },
+      "taupe-200": { "role": "neutral", "displayName": "Stone 200", "canonical": "#C9BCAC" },
+      "taupe-300": { "role": "neutral", "displayName": "Stone 300", "canonical": "#B0A190" },
+      "taupe-400": { "role": "neutral", "displayName": "Stone 400", "canonical": "#8E7F6E" },
+      "taupe-500": { "role": "neutral", "displayName": "Stone 500", "canonical": "#6E6153" },
+      "ink-500": { "role": "neutral", "displayName": "Soft Ink", "canonical": "#3A342D", "tonalRamp": ["#14110D", "#242019", "#3A342D"] },
+      "ink-700": { "role": "neutral", "displayName": "Ink", "canonical": "#242019" },
+      "ink-900": { "role": "neutral", "displayName": "Espresso Ink", "canonical": "#14110D" },
+      "error": { "role": "error", "displayName": "Error Red", "canonical": "#DC2626" }
+    },
+    "typographyMeta": {
+      "display": { "displayName": "Display", "purpose": "Hero headline only; 2.75rem on mobile rising to 4.9rem at xl." },
+      "headline": { "displayName": "Headline", "purpose": "Section titles; 2.25rem on mobile rising to 3.4rem at lg." },
+      "title-lg": { "displayName": "Title Large", "purpose": "Service card names." },
+      "title-md": { "displayName": "Title Medium", "purpose": "Step names, form title, mobile menu links, legal subheads." },
+      "title-sm": { "displayName": "Title Small", "purpose": "Gallery captions and contact details." },
+      "quote": { "displayName": "Quote", "purpose": "Testimonial text, upright serif." },
+      "numeral": { "displayName": "Numeral", "purpose": "Step and badge numbers; stats use the same face at 2.25 to 3rem." },
+      "body-lg": { "displayName": "Body Large", "purpose": "Hero lead paragraph." },
+      "body-md": { "displayName": "Body", "purpose": "Paragraphs; 15px on mobile, 1rem from sm." },
+      "body-sm": { "displayName": "Body Small", "purpose": "Descriptions, helper text, footer." },
+      "label-kicker": { "displayName": "Kicker", "purpose": "Uppercase section kickers and metadata, 10 to 11px at 0.28em." },
+      "label-button": { "displayName": "Button Label", "purpose": "Uppercase button and arrow-link text." },
+      "label-nav": { "displayName": "Nav Label", "purpose": "Uppercase desktop navigation links." },
+      "label-chip": { "displayName": "Chip Label", "purpose": "Uppercase filter and option chips." },
+      "label-field": { "displayName": "Field Label", "purpose": "Uppercase form field labels." }
+    },
+    "shadows": [
+      { "name": "soft", "value": "0 4px 24px -6px rgba(36,32,25,.10)", "purpose": "Resting cards on cream and the solid navigation bar." },
+      { "name": "lift", "value": "0 22px 50px -18px rgba(36,32,25,.30)", "purpose": "Photography, badges, stats band, floating chrome, and hover state of cards and filled buttons." },
+      { "name": "glass", "value": "0 8px 40px -12px rgba(8,37,28,.45)", "purpose": "The hero's frosted glass card only." },
+      { "name": "field-focus", "value": "0 0 0 3px rgba(107,27,38,.10)", "purpose": "Focus ring on form fields." }
+    ],
+    "motion": [
+      { "name": "ease-signature", "value": "cubic-bezier(.16, 1, .3, 1)", "purpose": "Long ease-out for reveals, hero entrance, nav underline and carousel." },
+      { "name": "fade-up", "value": "0.8s, translateY(24px) to 0, staggered 0.12s", "purpose": "Hero entrance." },
+      { "name": "reveal", "value": "0.9s, translateY(28px) to 0, once on entering the viewport", "purpose": "Below-the-fold blocks." },
+      { "name": "hover", "value": "300ms", "purpose": "Colour, shadow and 2px lift on buttons and icon buttons." },
+      { "name": "card-hover", "value": "500ms", "purpose": "Card lift and gallery caption movement." },
+      { "name": "image-zoom", "value": "900ms to 1100ms ease-out, scale 1.10", "purpose": "Media inside service cards and gallery tiles." },
+      { "name": "marquee", "value": "38s linear infinite", "purpose": "Venue marquee strip." },
+      { "name": "carousel", "value": "0.7s slide, 6s autoplay", "purpose": "Testimonial carousel." }
+    ],
+    "breakpoints": [
+      { "name": "sm", "value": "640px" },
+      { "name": "md", "value": "768px" },
+      { "name": "lg", "value": "1024px" },
+      { "name": "xl", "value": "1280px" }
+    ]
+  },
+  "components": [
+    {
+      "name": "Primary Button",
+      "kind": "button",
+      "refersTo": "button-primary",
+      "description": "Main action on cream surfaces, such as the form submit.",
+      "html": "<button class=\"ds-btn-primary\">Envoyer <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M5 12h14M13 6l6 6-6 6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></button>",
+      "css": ".ds-btn-primary { display: inline-flex; align-items: center; gap: 12px; border: none; border-radius: 9999px; background: #6B1B26; color: #FDFBF6; padding: 16px 36px; font: 600 12px/1.5 Inter, system-ui, sans-serif; letter-spacing: 0.18em; text-transform: uppercase; cursor: pointer; transition: all .3s; } .ds-btn-primary svg { width: 16px; height: 16px; transition: transform .3s; } .ds-btn-primary:hover { background: #7E232D; transform: translateY(-2px); box-shadow: 0 22px 50px -18px rgba(36,32,25,.30); } .ds-btn-primary:hover svg { transform: translateX(4px); } .ds-btn-primary:focus-visible { outline: 2px solid #6B1B26; outline-offset: 3px; }"
+    },
+    {
+      "name": "Gold Button",
+      "kind": "button",
+      "refersTo": "button-gold",
+      "description": "Main action on wine and ink surfaces, such as the hero call to action.",
+      "html": "<div class=\"ds-dark\"><a class=\"ds-btn-gold\" href=\"#\">Réserver un rendez-vous <svg viewBox=\"0 0 24 24\" fill=\"none\" stroke=\"currentColor\" stroke-width=\"1.6\"><path d=\"M5 12h14M13 6l6 6-6 6\" stroke-linecap=\"round\" stroke-linejoin=\"round\"/></svg></a></div>",
+      "css": ".ds-dark { background: linear-gradient(135deg, #3A0D16, #6B1B26 55%, #14110D); padding: 32px; border-radius: 16px; } .ds-btn-gold { display: inline-flex; align-items: center; gap: 12px; border-radius: 9999px; background: #C9A96A; color: #14110D; padding: 16px 32px; font: 600 12px/1.5 Inter, system-ui, sans-serif; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; transition: all .3s; } .ds-btn-gold svg { width: 16px; height: 16px; transition: transform .3s; } .ds-btn-gold:hover { background: #D4B87C; transform: translateY(-2px); box-shadow: 0 22px 50px -18px rgba(36,32,25,.30); } .ds-btn-gold:hover svg { transform: translateX(4px); } .ds-btn-gold:focus-visible { outline: 2px solid #E3CD9F; outline-offset: 3px; }"
+    },
+    {
+      "name": "Ghost Button on Dark",
+      "kind": "button",
+      "refersTo": "button-ghost-on-dark",
+      "description": "Secondary action beside a gold button on wine surfaces.",
+      "html": "<div class=\"ds-dark-ghost\"><a class=\"ds-btn-ghost\" href=\"#\">Voir notre portfolio</a></div>",
+      "css": ".ds-dark-ghost { background: linear-gradient(135deg, #3A0D16, #6B1B26 55%, #14110D); padding: 32px; border-radius: 16px; } .ds-btn-ghost { display: inline-flex; align-items: center; border-radius: 9999px; border: 1px solid rgba(253,251,246,.35); background: rgba(253,251,246,.05); backdrop-filter: blur(12px); color: #FDFBF6; padding: 16px 32px; font: 600 12px/1.5 Inter, system-ui, sans-serif; letter-spacing: 0.18em; text-transform: uppercase; text-decoration: none; transition: all .3s; } .ds-btn-ghost:hover { background: rgba(253,251,246,.15); border-color: rgba(253,251,246,.6); } .ds-btn-ghost:focus-visible { outline: 2px solid #E3CD9F; outline-offset: 3px; }"
+    },
+    {
+      "name": "Filter Chip",
+      "kind": "chip",
+      "refersTo": "chip",
+      "description": "Portfolio filters and form option chips; the selected chip fills Salon Wine.",
+      "html": "<div class=\"ds-chips\"><button class=\"ds-chip ds-chip-selected\">Tout</button><button class=\"ds-chip\">Mariages</button><button class=\"ds-chip\">Anniversaires</button></div>",
+      "css": ".ds-chips { display: flex; flex-wrap: wrap; gap: 10px; } .ds-chip { border-radius: 9999px; border: 1px solid #C9BCAC; background: transparent; color: #242019; padding: 10px 20px; font: 600 11px/1.5 Inter, system-ui, sans-serif; letter-spacing: 0.16em; text-transform: uppercase; cursor: pointer; transition: all .3s; } .ds-chip:hover { border-color: #6B1B26; } .ds-chip:focus-visible { outline: none; box-shadow: 0 0 0 2px rgba(107,27,38,.30); } .ds-chip-selected { background: #6B1B26; border-color: #6B1B26; color: #F8F2E8; }"
+    },
+    {
+      "name": "Numbered Badge",
+      "kind": "custom",
+      "refersTo": "badge-numeral",
+      "description": "Serif numeral block for process steps, service numbers and the years badge.",
+      "html": "<div class=\"ds-badge\"><p class=\"ds-badge-num\">01</p><p class=\"ds-badge-label\">Étape 01</p></div>",
+      "css": ".ds-badge { display: inline-block; border-radius: 16px; background: #6B1B26; color: #FDFBF6; padding: 20px 24px; box-shadow: 0 22px 50px -18px rgba(36,32,25,.30); } .ds-badge-num { margin: 0; font: 400 1.875rem/1 'Playfair Display', Georgia, serif; } .ds-badge-label { margin: 4px 0 0; font: 400 10px/1.5 Inter, system-ui, sans-serif; letter-spacing: 0.28em; text-transform: uppercase; color: rgba(239,227,209,.75); }"
+    },
+    {
+      "name": "Section Header",
+      "kind": "custom",
+      "refersTo": "section-kicker",
+      "description": "Kicker with its gold rule, then a serif headline with one italic accent.",
+      "html": "<div class=\"ds-header\"><p class=\"ds-kicker\">La Maison</p><h2 class=\"ds-headline\">Le décor pose le cadre.<br><em>L'animation</em> lui donne vie.</h2></div>",
+      "css": ".ds-header { background: #FDFBF6; padding: 24px; } .ds-kicker { margin: 0; font: 400 11px/1.5 Inter, system-ui, sans-serif; letter-spacing: 0.28em; text-transform: uppercase; color: #93303D; } .ds-kicker::after { content: ''; display: block; width: 56px; height: 1px; background: #C9A96A; margin-top: 20px; } .ds-headline { margin: 32px 0 0; font: 400 2.25rem/1.1 'Playfair Display', Georgia, serif; letter-spacing: -0.02em; color: #14110D; } .ds-headline em { font-style: italic; color: #6B1B26; }"
+    },
+    {
+      "name": "Text Field",
+      "kind": "input",
+      "refersTo": "input",
+      "description": "Form field with an uppercase label above; border turns wine with a soft ring on focus.",
+      "html": "<label class=\"ds-field-label\" for=\"ds-name\">Nom complet <span>*</span></label><input id=\"ds-name\" class=\"ds-field\" type=\"text\" placeholder=\"Camille Béranger\">",
+      "css": ".ds-field-label { display: block; margin-bottom: 8px; font: 400 11px/1.5 Inter, system-ui, sans-serif; letter-spacing: 0.16em; text-transform: uppercase; color: #6E6153; } .ds-field-label span { color: #6B1B26; } .ds-field { width: 100%; max-width: 320px; border-radius: 12px; border: 1px solid #C9BCAC; background: #FDFBF6; color: #14110D; padding: 14px 16px; font: 400 15px/1.5 Inter, system-ui, sans-serif; transition: all .15s; } .ds-field::placeholder { color: #B0A190; } .ds-field:focus { outline: none; border-color: #6B1B26; box-shadow: 0 0 0 3px rgba(107,27,38,.10); }"
+    },
+    {
+      "name": "Testimonial Glass Card",
+      "kind": "card",
+      "refersTo": "card-testimonial",
+      "description": "Frosted card on wine holding a quote and its author; glass is used only over wine.",
+      "html": "<div class=\"ds-wine\"><blockquote class=\"ds-quote-card\"><svg viewBox=\"0 0 24 24\" fill=\"currentColor\"><path d=\"M9.5 5C6.5 6.6 4.6 9.4 4.6 13v6h6.6v-6.6H8.1c.1-2.2 1-3.6 2.7-4.6L9.5 5zm9 0c-3 1.6-4.9 4.4-4.9 8v6h6.6v-6.6h-3.1c.1-2.2 1-3.6 2.7-4.6L18.5 5z\"/></svg><p class=\"ds-quote-text\">« Ils ont habillé l'orangerie puis animé toute la soirée. Pas une minute de retard sur le déroulé. »</p><footer class=\"ds-quote-author\"><p class=\"ds-quote-name\">Zhang Min</p><p class=\"ds-quote-role\">Mariage · Château de Villette</p></footer></blockquote></div>",
+      "css": ".ds-wine { background: #6B1B26; padding: 32px; border-radius: 16px; } .ds-quote-card { margin: 0; max-width: 380px; border-radius: 28px; border: 1px solid rgba(253,251,246,.15); background: rgba(253,251,246,.07); backdrop-filter: blur(24px); padding: 36px; } .ds-quote-card svg { width: 36px; height: 36px; color: rgba(227,205,159,.7); } .ds-quote-text { margin: 24px 0 0; font: 400 1.125rem/1.625 'Playfair Display', Georgia, serif; color: #F8F2E8; } .ds-quote-author { margin-top: 32px; padding-top: 24px; border-top: 1px solid rgba(253,251,246,.12); } .ds-quote-name { margin: 0; font: 500 1rem/1.5 Inter, system-ui, sans-serif; color: #FDFBF6; } .ds-quote-role { margin: 0; font: 400 12px/1.5 Inter, system-ui, sans-serif; letter-spacing: 0.14em; text-transform: uppercase; color: rgba(239,227,209,.6); }"
+    },
+    {
+      "name": "Navigation Links",
+      "kind": "nav",
+      "refersTo": "nav-solid",
+      "description": "Solid-state header links with a growing underline and the language switch.",
+      "html": "<nav class=\"ds-nav\"><a class=\"ds-navlink ds-navlink-active\" href=\"#\">Maison</a><a class=\"ds-navlink\" href=\"#\">Prestations</a><a class=\"ds-navlink\" href=\"#\">Portfolio</a><span class=\"ds-lang\"><a class=\"ds-lang-btn ds-lang-active\" href=\"#\">FR</a><a class=\"ds-lang-btn\" href=\"#\">中文</a><a class=\"ds-lang-btn\" href=\"#\">EN</a></span></nav>",
+      "css": ".ds-nav { display: flex; align-items: center; gap: 36px; background: rgba(253,251,246,.92); box-shadow: 0 4px 24px -6px rgba(36,32,25,.10); padding: 24px 32px; color: #14110D; font: 500 13px/1.5 Inter, system-ui, sans-serif; letter-spacing: 0.16em; text-transform: uppercase; } .ds-navlink { position: relative; color: inherit; text-decoration: none; } .ds-navlink::after { content: ''; position: absolute; left: 0; bottom: -4px; height: 1px; width: 0; background: currentColor; transition: width .35s cubic-bezier(.16,1,.3,1); } .ds-navlink:hover::after, .ds-navlink:focus-visible::after, .ds-navlink-active::after { width: 100%; } .ds-navlink:focus-visible { outline: none; } .ds-lang { display: inline-flex; gap: 4px; margin-left: auto; padding: 4px; border-radius: 9999px; border: 1px solid rgba(20,17,13,.2); font-size: 11px; font-weight: 600; letter-spacing: 0.05em; } .ds-lang-btn { border-radius: 9999px; padding: 4px 10px; color: inherit; text-decoration: none; transition: background-color .2s, color .2s; } .ds-lang-active { background: #C9A96A; color: #14110D; }"
+    }
+  ],
+  "narrative": {
+    "northStar": "The Candlelit Salon",
+    "overview": "The site is a Parisian reception room at dusk. Deep wine is the wall colour, gold is the candlelight that catches on a few edges, and linen cream is the table everything rests on. Visitors arrive in the dark, warm room (a full-height wine hero with a frosted-glass card), then step into the lit one (cream sections where photography and serif headlines carry the page), and return to wine for the moments that deserve a hush: the stats band and the testimonials.\n\nThe voice is composed and ceremonial, not loud. Headlines are set in a regular-weight high-contrast serif with a single italic accent; everything functional is whispered in small, widely tracked uppercase sans. Space is generous (sections breathe at 96 to 160px), corners are soft, and photography of real events is the main decoration. Motion is slow and settling: content rises into place once, images drift on hover, nothing bounces.\n\nThis system must never drift toward the pastel wedding template: no blush pink, no script or handwriting fonts, no generic bridal styling. The palette is wine, gold and cream, and the type is Playfair Display and Inter.",
+    "keyCharacteristics": [
+      "Wine and cream alternate as \"dark room\" and \"lit room\"; gold is an accent of light, never a field.",
+      "Regular-weight serif headlines with one italic accent phrase each.",
+      "Tiny uppercase labels with very wide tracking (0.14 to 0.28em).",
+      "Pill buttons and chips, generously rounded cards (24 to 32px), no square corners on components.",
+      "Warm, ink-tinted shadows and frosted glass on wine surfaces.",
+      "Real event photography and video in every content block, with a warm gradient placeholder behind each asset.",
+      "Slow ease-out motion on one signature curve, fully disabled under reduced motion."
+    ],
+    "rules": [
+      { "name": "The Candlelight Rule", "body": "Gold is light, not paint. It fills exactly one kind of thing: the action that matters on a dark surface. On cream, gold is limited to hairlines and dashes, and emphasis is carried by Salon Wine instead.", "section": "colors" },
+      { "name": "The Two Rooms Rule", "body": "Light sections alternate Linen Cream and Ivory Parchment; wine is reserved for the hero, the marquee, the stats band and testimonials; Espresso Ink closes the page. Do not introduce a fourth surface colour.", "section": "colors" },
+      { "name": "The One Category Colour Rule", "body": "Dusk Mauve marks anniversaries and nothing else. A new service category needs its own considered hue, not a reuse of mauve or a tint of wine.", "section": "colors" },
+      { "name": "The Italic Accent Rule", "body": "A headline may italicise one word or short phrase, coloured Champagne Gilt on dark or Salon Wine on cream. Never italicise a whole headline, and never use bold for emphasis in a serif line.", "section": "typography" },
+      { "name": "The Whispered Label Rule", "body": "Uppercase is for Inter labels at 13px and below, always tracked at 0.14em or wider and never heavier than 600. Serif text is never uppercased.", "section": "typography" },
+      { "name": "The Regular Weight Rule", "body": "Playfair Display is set at 400 everywhere. Size and italics create hierarchy; weight does not.", "section": "typography" },
+      { "name": "The Warm Shadow Rule", "body": "Shadows are tinted with ink (36, 32, 25), wide, and pulled in with negative spread. Never use neutral grey or pure black shadows, and never a hard-edged one.", "section": "elevation" },
+      { "name": "The Glass on Wine Rule", "body": "Frosted surfaces exist only on dark wine backgrounds. On cream, a card is an opaque Linen Cream surface with a Stone 100 hairline and a Soft shadow.", "section": "elevation" }
+    ],
+    "dos": [
+      "Do keep to wine, gold and cream, with taupe and ink as the only neutrals; follow the Two Rooms Rule when adding a section.",
+      "Do use a gold button for the main action on wine or ink surfaces and a wine button on cream; one filled button per view.",
+      "Do set every headline in Playfair Display at weight 400 with at most one italic accent phrase.",
+      "Do open each section with an uppercase kicker (11px, 0.28em) and its 56px gold rule, then a 32px gap to the headline.",
+      "Do make interactive elements pills or circles and give containers a 24 to 32px radius by size.",
+      "Do use the Soft and Lift shadows as written, and frosted glass only over wine.",
+      "Do lead with real event photography or video in 4:3, 16:11 or portrait ratios, over the warm placeholder gradient.",
+      "Do animate on the signature ease-out curve, once on entry, and honour prefers-reduced-motion.",
+      "Do check every new block in French, English and Chinese; add text through the i18n dictionary in index.html."
+    ],
+    "donts": [
+      "Don't drift toward a pastel wedding template: no blush pink, no script or handwriting fonts, no generic bridal styling.",
+      "Don't use gold as a large fill or as body text on cream; Antique Brass and Candle Gold fall below 4.5:1 there.",
+      "Don't uppercase or embolden serif text, or set labels heavier than 600.",
+      "Don't use square-cornered buttons, cards, inputs or images.",
+      "Don't use grey or black shadows, hard-edged shadows, or glass panels on cream backgrounds.",
+      "Don't reuse Dusk Mauve outside the anniversary category, or pull in the unused dustyblue, wine-300 or other dormant palette steps without a reason.",
+      "Don't add bouncing, elastic or looping decorative animation; the marquee and the hover zoom are the only continuous motion.",
+      "Don't hand-edit en/index.html, zh/index.html or css/tailwind.css; they are build output."
+    ]
+  }
+}
